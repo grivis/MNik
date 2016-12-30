@@ -16,5 +16,12 @@ for word in words:
         dict1[word] = words.count(word)
 
 
-for word in sorted(dict1.keys(), reverse=True):
-    print(word, ':', dict1[word])
+# for word in sorted(dict1.keys(), reverse=True):
+#     print(word, ':', dict1[word])
+
+wordtuples = []
+for key, value in dict1.items():
+    wordtuples.append((value, key))
+
+for wt in sorted(wordtuples, reverse=True):
+    print(wt[1], ' : ', wt[0])
