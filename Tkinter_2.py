@@ -1,20 +1,24 @@
 from tkinter import *
 
+'''
+Without this midule GUI will not work
+'''
+
 root = Tk()
 root.title('Our first GUI')
 
-but = Button(root, text = 'This is a button', width=30, height=5, bg ='yellow', fg='blue')
+but = Button(root, text='This is a button', width=30, height=5, bg='yellow', fg='blue')
 lab = Label(root, text="Это метка! \n Из двух строк.", font="Arial 18")
 ent = Entry(root, width=25, bd=3, font="Arial 20")
-tex = Text(root,width=40,
-font="Verdana 12",
-wrap=WORD)
+tex = Text(root, width=40,
+           font="Verdana 12",
+           wrap=WORD)
 
 var = IntVar()
 var.set(1)
 '''
-This is a block comment
-"var"" variable is linked to Radiobuttons
+This is a block comment.
+The "var"" variable is linked to Radiobuttons
 '''
 
 rad0 = Radiobutton(root, text='First', variable=var, value=0)
@@ -33,8 +37,6 @@ lis = Listbox(root, selectmode=MULTIPLE, height=4)
 for i in r:
     lis.insert(END, i)
 
-
-
 tex.pack()
 lab.pack()
 but.pack()
@@ -45,7 +47,5 @@ rad2.pack()
 che1.pack()
 che2.pack()
 lis.pack()
-
-
 
 root.mainloop()
